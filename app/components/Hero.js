@@ -21,12 +21,12 @@ export default function Hero() {
               initial={{ width: 0 }}
               animate={{ width: "100px" }}
               transition={{ ease: [0.76, 0, 0.24, 1], delay: 0.2, damping: 15 }}
-              className="md:h-[55px] h-[45px] rounded-md overflow-hidden bg-violet-500"
+              className="md:h-[55px] h-[50px] heroBgImage rounded-md overflow-hidden bg-violet-500"
             >
               {/* <Image alt="" src={textLogo} /> */}
             </motion.div>
             <h1 className="uppercase text-left md:text-[75px] sm:text-[50px] text-[40px] font-bold leading-[5px] tracking-tighter ">
-              Eye <span className="text-violet-500">Opening</span>
+              Eye <span className="text-[#6eeb6b]">Opening</span>
             </h1>
           </div>
         </div>

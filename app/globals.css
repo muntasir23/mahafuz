@@ -44,43 +44,6 @@ body {
   backdrop-filter: blur(8px);
 }
 
-@media (max-width: 980px) {
-  .grid-bg {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.05),
-        transparent 0%,
-        transparent 100%,
-        rgba(0, 0, 0, 0.05)
-      ),
-      linear-gradient(
-        0deg,
-        transparent 24%,
-        rgba(255, 255, 255, 0.05) 25%,
-        rgba(255, 255, 255, 0.05) 26%,
-        transparent 27%,
-        transparent 74%,
-        rgba(255, 255, 255, 0.05) 75%,
-        rgba(255, 255, 255, 0.05) 76%,
-        transparent 77%,
-        transparent
-      ),
-      linear-gradient(
-        90deg,
-        transparent 24%,
-        rgba(255, 255, 255, 0.05) 25%,
-        rgba(255, 255, 255, 0.08) 26%,
-        transparent 27%,
-        transparent 74%,
-        rgba(255, 255, 255, 0.05) 75%,
-        rgba(255, 255, 255, 0.05) 76%,
-        transparent 77%,
-        transparent
-      );
-    background-size: 120px 0px;
-  }
-}
-
 .radial-gradient {
   background: radial-gradient(
       circle at 50% 0%,
@@ -150,3 +113,57 @@ body {
   border-radius: 36px;
   cursor: pointer;
 }
+
+.heroBgImage {
+  background-image: url("../public/eyesCover.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blury {
+  filter: blur(100px);
+}
+
+.strock {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  text-transform: uppercase;
+}
+
+/* @media (max-width: 980px) {
+  .grid-bg {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.05),
+        transparent 0%,
+        transparent 100%,
+        rgba(0, 0, 0, 0.05)
+      ),
+      linear-gradient(
+        0deg,
+        transparent 24%,
+        rgba(255, 255, 255, 0.05) 25%,
+        rgba(255, 255, 255, 0.05) 26%,
+        transparent 27%,
+        transparent 74%,
+        rgba(255, 255, 255, 0.05) 75%,
+        rgba(255, 255, 255, 0.05) 76%,
+        transparent 77%,
+        transparent
+      ),
+      linear-gradient(
+        90deg,
+        transparent 24%,
+        rgba(255, 255, 255, 0.05) 25%,
+        rgba(255, 255, 255, 0.08) 26%,
+        transparent 27%,
+        transparent 74%,
+        rgba(255, 255, 255, 0.05) 75%,
+        rgba(255, 255, 255, 0.05) 76%,
+        transparent 77%,
+        transparent
+      );
+    background-size: 120px 0px;
+  }
+} */

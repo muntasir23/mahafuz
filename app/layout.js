@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
-import logo from '../public/logo.jpg'
+import logo from '../public/greenLogo.png'
 import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,17 +16,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <nav className="blurry shadow-md shadow-gray-600/10 w-[100%] z-[999] grid place-items-center sticky top-0">
-          <div className="md:w-[900px] p-3">
-            <ul className="flex items-center justify-start gap-10 text-white">
+          <div className="md:w-[900px] w-[95%] p-2 md:p-2 ">
+            <ul className="flex items-center justify-start gap-5 text-white">
               <Image alt="" src={logo} className="w-[40px]" />
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/" className="uppercase hover:text-[#ffbd59]">Home</Link>
               </li>
               <li>
-                <Link href="/about">About</Link>
+                <Link href="/webproject" className="uppercase hover:text-[#ffbd59]">Project</Link>
               </li>
               <li>
-                <Link href="/blog">Blog</Link>
+                <Link href="/blog" className="uppercase hover:text-[#ffbd59]">Blog</Link>
               </li>
             </ul>
           </div>

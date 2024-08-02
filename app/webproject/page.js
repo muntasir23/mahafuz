@@ -76,15 +76,15 @@ export default function Home() {
 
   return (
     <div className="relative w-[100%] grid place-items-center mb-[100px]">
-       <div className="absolute h-[300px] w-[300px] top-[-30px] left-[-150px] rounded-full bg-gradient-to-b from-[#ffbd59] blury"></div>
+       <div className="absolute h-[300px] w-[300px] top-[-30px] left-[-150px] rounded-full bg-gradient-to-b from-[#6eeb6b] blury"></div>
 
       <div className="md:w-[900px] mt-10 w-[95%] blurry rounded z-10">
-        <h1 className="text-zinc-200 md:text-[35px] text-[35px] border-l-4 pl-3 border-orange-600 font-semibold">
+        <h1 className="text-zinc-200 md:text-[35px] text-[35px] border-l-4 pl-3 border-[#6eeb6b] font-semibold">
           Projects
         </h1>
       </div>
 
-      <div className="blurry overflow-hidden md:w-[900px] w-[95%] p-3 grid place-items-center border rounded-xl bg-gradient-to-tl from-[#ffbd59] border-[#ffbd59] mt-10">
+      <div className="blurry overflow-hidden md:w-[900px] w-[95%] p-3 grid place-items-center border rounded-xl bg-gradient-to-tl from-[#6eeb6b] border-[#6eeb6b] mt-10">
         <div className="w-[95%] flex flex-wrap gap-5 items-center justify-center">
           {data.map((item, i) => (
             <>

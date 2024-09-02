@@ -25,13 +25,39 @@ const fadeInAnimationVariants = {
 export default function ProjectModal({ onClose, item }) {
   const { id, name, technologyUsed, imgUrl, description } = item;
 
+  const [status, setStatus] = useState("About");
+
+  let content = null;
+
+  if (status === "About") {
+    content = (
+      <div>
+        <p className="text-zinc-400">{description}</p>{" "}
+        <div className="mt-3 border-t border-zinc-800 py-2">
+          <p className="text-[#ffbd59] font-semibold">Technology Used</p>
+          <div className="flex items-center gap-3 mt-2">
+            {technologyUsed.map((v, i) => (
+              <div key={i}>
+                <span className="bg-black px-5 py-2 rounded font-semibold text-white text-[12px]">
+                  {v}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+  if (status === "Ref") {
+    content = <p>Ref</p>;
+  }
+
   return (
     <div className="w-[100%] grid place-items-center z-40">
       <div
         onClick={onClose}
-        className="blurry fixed top-0 left-0 h-[100vh] w-[100%] "
+        className="blurry fixed top-0 left-0 h-[100vh] w-[100%]"
       ></div>
-
       <div
         onClick={onClose}
         className="absolute -translate-x-[50%] md:top-5 top-[5%] text-zinc-600 hover:text-red-600 left-[50%] text-[32px] cursor-pointer"
@@ -58,34 +84,32 @@ export default function ProjectModal({ onClose, item }) {
         </div>
 
         <div className="">
-          <h1 className="text-[25px] border-l-[7px] border-l-orange-600 font-semibold text-orange-500 border bg-black px-3 border-zinc-800 rounded-md">
+          <h1 className="text-[25px] font-semibold text-[#6eeb6b] rounded-md">
             {name}
           </h1>
-          <h3 className="text-[15px] text-zinc-400 mt-5 border-b pb-5 border-zinc-800">
-            {description}
-          </h3>
-          <p className="text-[15px] text-zinc-200 mt-5 font-semibold">
-            Technology Used:
-          </p>
-          <div className="flex justify-start gap-4">
-            {technologyUsed.map((v, i) => (
-              <>
-                <motion.p
-                  key={i}
-                  variants={fadeInAnimationVariants}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}
-                  custom={i}
-                  className="mt-[25px] font-semibold text-zinc-400 text-[15px] bg-orange-700 px-4 py-1 rounded-3xl"
-                >
-                  {v}
-                </motion.p>
-              </>
-            ))}
+          <div className="mt-5 flex gap-3 border-b border-b-zinc-800 w-full ">
+            <button
+              onClick={() => setStatus("About")}
+              className={`${
+                status === "About"
+                  ? "border-b-2 border-b-[#ffbd59] bg-black "
+                  : ""
+              } text-white  py-1 px-5 rounded-t font-semibold`}
+            >
+              About
+            </button>
+            <button
+              onClick={() => setStatus("Ref")}
+              className={`${
+                status === "Ref"
+                  ? "border-b-2 border-b-[#ffbd59] bg-black "
+                  : ""
+              } text-white  py-1 px-5 rounded-t font-semibold`}
+            >
+              Refference
+            </button>
           </div>
+          <div className="content mt-4">{content}</div>
         </div>
       </motion.div>
     </div>

@@ -17,7 +17,7 @@ export default function TechSkills() {
           Technology Skills
         </h1>
 
-        <span className="absolute left-[50%] top-[50%] h-[40px] w-[40px] home-campaign-glowing-icon-glow-1 z-3"></span>
+        <span className="blur absolute left-[50%] -translate-x-[50%] -translate-y-[50%] top-[50%] rounded-full h-[40px] w-[40px] bg-[#6eeb6b]  z-3"></span>
         <div className="skills md:w-[600px] p-5 rounded-lg flex items-center justify-center gap-[20px] flex-wrap z-10">
           <TechItem bgColor="#e34c26" textColor="#ebebeb">
             <FaHtml5 />

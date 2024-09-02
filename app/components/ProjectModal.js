@@ -1,4 +1,6 @@
 "use client";
+import { IoLogoGithub } from "react-icons/io";
+import { FaLink } from "react-icons/fa";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -49,7 +51,28 @@ export default function ProjectModal({ onClose, item }) {
     );
   }
   if (status === "Ref") {
-    content = <p>Ref</p>;
+    content = (
+      <div className="">
+        <p className="font-semibold text-white text-[15px]">
+          Github Repository
+        </p>
+        <li className="flex items-center gap-2 mt-2 text-white text-[15px]">
+          <IoLogoGithub />{" "}
+          <a href="/" className="text-blue-600">
+            link
+          </a>
+        </li>
+        <p className="font-semibold text-white mt-4 text-[15px]">
+          Website Link
+        </p>
+        <li className="flex items-center gap-2 mt-2 text-white text-[15px]">
+          <FaLink />{" "}
+          <a href="/" className="text-blue-600">
+            link
+          </a>
+        </li>
+      </div>
+    );
   }
 
   return (
@@ -83,11 +106,11 @@ export default function ProjectModal({ onClose, item }) {
           />
         </div>
 
-        <div className="">
+        <div className="w-[100%]">
           <h1 className="text-[25px] font-semibold text-[#6eeb6b] rounded-md">
             {name}
           </h1>
-          <div className="mt-5 flex gap-3 border-b border-b-zinc-800 w-full ">
+          <div className="buttons mt-5 flex gap-3 border-b border-b-zinc-800 w-[100%]">
             <button
               onClick={() => setStatus("About")}
               className={`${
@@ -109,7 +132,7 @@ export default function ProjectModal({ onClose, item }) {
               Refference
             </button>
           </div>
-          <div className="content mt-4">{content}</div>
+          <div className="content mt-4 w-[100%]">{content}</div>
         </div>
       </motion.div>
     </div>

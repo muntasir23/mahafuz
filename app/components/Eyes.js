@@ -20,7 +20,7 @@ export default function Eyes() {
   }, []);
 
   return (
-    <div className="w-full md:py-[100px] p-[20px] my-7 bg-white overflow-hidden grid place-items-center">
+    <div className="w-full md:py-[100px] p-[0px] my-3 bg-white overflow-hidden grid place-items-center">
       <div
         data-scroll
         data-scroll-speed="-0.5"

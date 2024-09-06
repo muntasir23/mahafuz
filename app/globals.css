@@ -41,7 +41,6 @@ body {
   background-size: 120px 2px;
 }
 
-
 .blurry {
   backdrop-filter: blur(8px);
 }
@@ -137,3 +136,14 @@ body {
   text-transform: uppercase;
 }
 
+.display-property {
+  display: block;
+  visibility: visible;
+}
+
+@media (max-width: 980px) {
+  .display-property {
+    display: none;
+    visibility: hidden;
+  }
+}

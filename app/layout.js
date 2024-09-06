@@ -9,7 +9,7 @@ import MobileNav from "./components/MobileNav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "LWS || NEXT || TUTORIAL",
+  title: "Mahafuz Ahamed",
   description: "It is a practice of next js from Sumit Bhai",
 };
 

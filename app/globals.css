@@ -141,9 +141,28 @@ body {
   visibility: visible;
 }
 
+.menubar {
+  top: -100vh;
+  transition: 0.3s ease-in-out;
+}
+.menubar-open {
+  top: 60px;
+  transition: 0.3s ease-in-out;
+}
+
+
+.mobilemenu {
+  display: none;
+  visibility: hidden;
+}
+
 @media (max-width: 980px) {
   .display-property {
     display: none;
     visibility: hidden;
+  }
+  .mobilemenu {
+    display:grid;
+    visibility: visible;
   }
 }

@@ -215,3 +215,11 @@ body {
     );
   background-size: 120px 2px;
 }
+
+
+/* strock */
+.strock {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  text-transform: uppercase;
+}

@@ -19,22 +19,25 @@ export default function Eyes() {
   }, []);
 
   return (
-    <div className="w-full md:py-[100px] p-[0px] my-3 bg-white overflow-hidden grid place-items-center">
+    <div className="w-full md:py-[100px] p-[0px] my-3 overflow-hidden grid place-items-center">
       <div
         data-scroll
         data-scroll-speed="-0.5"
         className="relative md:w-[900px] mb-[60px] w-[90%] md:h-[550px] h-[300px] rounded bg-cover bg-no-repeat"
       >
-         {/* button */}
-         <div className="  absolute bottom-5 md:bottom-10  left-1/2 -translate-x-[50%] z-10 "> 
-            <ShinnyButton text="View Projects"><Link to='/webproject' ></Link></ShinnyButton>
-         </div>
+        {/* button */}
+        <div className="  absolute bottom-5 md:bottom-10  left-1/2 -translate-x-[50%] z-10 ">
+          <Link to="/projects">
+            <ShinnyButton text="View Projects" />
+          </Link>
+        </div>
+        <div className="absolute md:-top-[65px] top-[5px] left-1/2 -translate-x-[50%] ">
+          <p className="md:text-[70px] text-[50px] w-full strock text-[#6eeb6b] font-bold tracking-[25px]">
+            PLAY
+          </p>
+        </div>
         <div className="md:w-[900px] rounded-xl absolute top-0 w-[100%] h-[100%] overflow-hidden">
-          <img
-            alt=""
-            src={eyeCover}
-            className="absolute bottom-0 rounded-lg"
-          />
+          <img alt="" src={eyeCover} className="absolute bottom-0 rounded-lg" />
         </div>
         <div className="absolute flex gap-10 top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
           <div className="flex items-center justify-center md:w-[150px] w-[100px] md:h-[150px] h-[100px] bg-zinc-100 rounded-full">

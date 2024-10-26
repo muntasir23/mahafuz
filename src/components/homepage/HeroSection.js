@@ -1,6 +1,7 @@
 import React from "react";
 import ShinnyButton from "./Button";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -51,9 +52,9 @@ export default function HeroSection() {
           </p>
         </div>
         <div className="mt-[20px]">
-          <a download href="../../public/mahafuz.pdf">
-            <ShinnyButton text="Download Resume" />
-          </a>
+          <Link to="/blogs">
+            <ShinnyButton text="All Blogs" />
+          </Link>
         </div>
       </div>
     </div>

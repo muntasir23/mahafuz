@@ -1,24 +1,15 @@
 import React from "react";
-import { FaCircleXmark } from "react-icons/fa6";
+
 import Status from "./Status";
 
-export default function ProjectModal({ closeModal, item }) {
+export default function ProjectModal({item }) {
   return (
-    <div className="fixed h-[100vh] overflow-auto grid place-items-center w-full z-30">
-      <div className="overlay fixed blurry w-full h-full z-10 top-0"></div>
-
-      <div className="absolute top-10 text-white z-30 mb-10">
+    <div className="mt-10 overflow-auto grid place-items-center w-full z-30">
+      <div className=" text-white z-30 mb-10">
         {/* cross */}
         <div className="relative grid place-items-center">
-          <div
-            className="cursor-pointer absolute md:top-[-15px] top-[-10px] md:right-[-15px] right-[1px] md:h-[30px] md:w-[30px] text-[25px] text-red-700  rounded-full flex items-center justify-center "
-            onClick={closeModal}
-          >
-            <FaCircleXmark />
-          </div>
-
           {/* modal details */}
-          <div className="md:w-[700px] w-[95%] p-3 bg-zinc-950 border border-zinc-800 rounded">
+          <div className="md:w-[800px] w-[95%] p-3 bg-zinc-950 border border-zinc-800 rounded">
             {/* Image Box & title */}
             <div>
               <div className="img-box">

@@ -5,6 +5,7 @@ import "./App.css";
 import Projects from "./pages/Projects";
 import PriceSection from "./pages/Price-section";
 import Blogs from "./pages/Blogs";
+import SingleBlog from "./pages/SingleBlog";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/projects" element={<Projects />}></Route>
         <Route path="/allplans" element={<PriceSection />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
+        <Route path="/project/:projectId" element={<SingleBlog />}></Route>
       </Routes>
     </BrowserRouter>
   );

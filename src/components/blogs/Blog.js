@@ -1,6 +1,5 @@
 import React from "react";
 import { BsFillQuestionDiamondFill } from "react-icons/bs";
-import blogOne from "../../assets/pQuizer.jpg";
 
 export default function Blog({ data }) {
   const { title, imgUrl, description } = data;
